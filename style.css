@@ -1,0 +1,184 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.controls {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+select {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin: 0 5px;
+}
+
+.main-content {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* ⬅️ Panduan Pengguna */
+.usage-guide {
+  flex: 0.5;
+  min-width: 220px;
+  background: #f0f8ff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+  font-size: 0.95rem;
+}
+
+.usage-guide h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #004a99;
+}
+
+.usage-guide ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.usage-guide li {
+  margin-bottom: 8px;
+}
+
+/* Kalender */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  flex: 1;
+  min-width: 400px;
+}
+
+.cell {
+  background: linear-gradient(145deg, #fff, #f0f0f0);
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  min-height: 80px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.05);
+}
+
+.cell:hover {
+  background: #e0f7fa;
+}
+
+.cell .date {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.mood {
+  font-size: 1.8rem;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.summary-panel {
+  flex: 0.5;
+  min-width: 250px;
+  background: #f7f9fb;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+}
+
+#moodSummary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.mood-count {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
+
+.advice-box {
+  margin-top: 20px;
+  padding: 15px;
+  border-left: 5px solid #0072ff;
+  background: #eaf4ff;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.advice-box h3 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+  color: #004a99;
+}
+
+#adviceText,
+#graniteText {
+  font-size: 0.95rem;
+  color: #333;
+  margin: 0;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background: white;
+  margin: 10% auto;
+  padding: 1.5rem;
+  width: 300px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#moodOptions span {
+  font-size: 2rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#moodOptions span:hover {
+  transform: scale(1.3);
+}

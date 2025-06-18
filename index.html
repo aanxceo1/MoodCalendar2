@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kalender Mood Harian</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🧠 Kalender Mood Harian</h1>
+
+    <div class="controls">
+      <select id="monthSelect"></select>
+      <select id="yearSelect"></select>
+    </div>
+
+    <div class="main-content">
+      <!-- ⬅️ Panduan Pengguna -->
+      <div class="usage-guide">
+        <h2>📖 Cara Pakai:</h2>
+        <ul>
+          <li>Pilih bulan dan tahun di atas.</li>
+          <li>Klik tanggal di kalender untuk memilih mood.</li>
+          <li>Pilih emoji mood yang sesuai dengan perasaanmu.</li>
+          <li>Lihat ringkasan mood di samping kanan.</li>
+          <li>Saran AI Granite muncul berdasarkan data mood kamu.</li>
+        </ul>
+      </div>
+
+      <!-- Kalender Mood -->
+      <div class="calendar-grid" id="moodCalendar"></div>
+
+      <!-- Panel Resume dan AI -->
+      <div class="summary-panel">
+        <h2>📊 Resume Mood Bulan Ini</h2>
+        <div id="moodSummary"></div>
+
+        <div id="graniteAdvice" class="advice-box">
+          <h3>🧠 Saran Granite AI</h3>
+          <p id="graniteText">Analisis mood kamu sedang diproses..(butuh API dari replicate, karena berbayar fitur pending bos).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Pilih Mood -->
+  <div id="moodModal" class="modal">
+    <div class="modal-content">
+      <h3>Pilih Mood:</h3>
+      <div id="moodOptions">
+        <span data-mood="😊">😊</span>
+        <span data-mood="😐">😐</span>
+        <span data-mood="😢">😢</span>
+        <span data-mood="😡">😡</span>
+        <span data-mood="😍">😍</span>
+      </div>
+      <button onclick="closeMoodModal()">Batal</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
